@@ -38,8 +38,30 @@ jesli chcemy korzystać z npm albo npx to sprawdzamy czy mamy package.lock.json,
 
     ##w pliku .eslint w "extands" dodajemy "prettier" i usuwamy "react-app"
 
-    "extends": ["airbnb", "prettier", "airbnb/hooks"],
+    "extends": ["airbnb", "prettier"],
+
+    ##dodajemy zmienne globalne które sa undefinde typu "document"
+
+     "globals": {
+        "document": true
+    },
 
 #Instalowanie husky i lint-stage => służące sprawdzenia poprawności kodu przed zrobieniem commit
 
     npm install -D husky lint-staged
+
+## w package.json dodać
+
+"husky": {
+"hooks": {
+"pre-commit": "lint-staged"
+}
+
+},
+"lint-staged": {
+"\*.js": [
+"prettier --config .prettierrc --write",
+"eslint --fix",
+"git add"
+]
+},

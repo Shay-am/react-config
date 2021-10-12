@@ -1,5 +1,8 @@
 {
-  "extends": ["airbnb", "prettier", "airbnb/hooks"],
+  "extends": ["airbnb", "prettier"],
+  "globals": {
+    "document": true
+  },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
