@@ -3,6 +3,7 @@
 jesli chcemy korzystać z npm albo npx to sprawdzamy czy mamy package.lock.json, jak mamy yarn.lock to usuwamy go i wpisujemy komende npm install
 
 #Instalacja Eslinta
+
 ##.stworzenie pliku eslintrc
 
 ##.przenieśc extands z package.json do .eslintrc
@@ -11,7 +12,7 @@ jesli chcemy korzystać z npm albo npx to sprawdzamy czy mamy package.lock.json,
         	"extends": ["react-app"]
     }
 
-##. zainstalowanie paczki airbn, potrzeba kilka paczek zainstalowac, ale istnieje jedna komenda:
+##. zainstalowanie paczki airbnb, potrzeba kilka paczek zainstalowac, ale istnieje jedna komenda:
 
     npx install-peerdeps --dev eslint-config-airbnb
 
@@ -30,10 +31,15 @@ jesli chcemy korzystać z npm albo npx to sprawdzamy czy mamy package.lock.json,
 ---
 
 #instalacja Prettier
+
 ##zainstalowanie paczki konfigurującej współdziałanie 'eslinta' i prettier
 
     npm install -D eslint-config-prettier prettier
 
-    ##w pliku .eslint w "extands"
+    ##w pliku .eslint w "extands" dodajemy "prettier" i usuwamy "react-app"
 
-    "extends": ["airbnb", "prettier", "prettier/react", "airbnb/hooks"],
+    "extends": ["airbnb", "prettier", "airbnb/hooks"],
+
+#Instalowanie husky i lint-stage => służące sprawdzenia poprawności kodu przed zrobieniem commit
+
+    npm install -D husky lint-staged
