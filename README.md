@@ -65,3 +65,13 @@ jesli chcemy korzystać z npm albo npx to sprawdzamy czy mamy package.lock.json,
 "git add"
 ]
 },
+
+#zainstalowanie styled-components
+
+npm install --save styled-components
+
+#dodanie pliku .env a w nim
+
+NODE_PATH=src
+
+słuzy do ścieżek absolutnych, tzn będziemy zaczynac importowac zawsze od src
